@@ -3,11 +3,11 @@
 {% block content %}
     <a href="{% url 'leads:lead-list' %}">Go back to leads</a>
     <hr>
-    <h1>Create new Lead</h1>
+    <h1>Update Lead: {{lead.first_name}} {{lead.last_name}}</h1>
     <form method="post" action=".">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Submit</button>
     </form>
-
 {% endblock content %}
+
