@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Lead
+from .models import Lead, Agent
+from .forms import LeadForm, LeadModelForm
 # Create your views here.
 
 
@@ -22,4 +23,26 @@ def lead_detail(request, pk):
 
 
 def lead_create(request):
-    return render(request, 'leads/lead_create.html')
+
+    form = LeadModelForm()
+
+    if request.method=='POST':
+        form = LeadModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("/leads")
+
+    context = {
+        'form':form
+    }
+    return render(request, 'leads/lead_create.html', context)
+
+    
+def lead_update(request, pk):
+    lead = Lead.objects.get(id=pk)
+
+    contex = {
+        "lead":lead
+    }
+
+    return render(request, 'leads/lead_update.html', context)
