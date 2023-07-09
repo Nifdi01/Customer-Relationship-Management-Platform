@@ -16,6 +16,7 @@ class LeadModelForm(forms.ModelForm):
             'age',
             'agent',
         )
+        
 
 class CustomUserCreationForm(UserCreationForm):
     class Meta:

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <section class="text-gray-600 body-font overflow-hidden">
@@ -29,7 +30,7 @@
             <a href="{% url 'leads:lead-delete' lead.pk %}" class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Delete</a>
           </div>
         </div>
-        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400">
+        <img alt="ecommerce" class="lg: w-1/2 lg:h-auto h-50 object-scale-down object-center rounded" src="https://i.pinimg.com/564x/9c/14/89/9c1489605999d7230521333111a9c302.jpg">
     </div>
   </div>
 </section>

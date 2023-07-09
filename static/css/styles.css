@@ -1,0 +1,45 @@
+/* styles.css */
+
+/* Form Styles */
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da; /* Add border style */
+    border-radius: 4px; /* Add border radius */
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+    outline: 0; /* Remove default outline */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Add focus effect */
+}
+
+/* Button Styles */
+/* .btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+} */

@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leadify</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="{% static 'styles.css' %}">
+    {% load static %}
+
+    {% comment %} <link rel="stylesheet" href="{% static 'css/styles.css' %}"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}"> {% endcomment %}
 </head>
 <body>
     <div class="max-w-7xl mx-auto">
