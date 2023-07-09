@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from .models import Lead, Agent
 from .forms import LeadModelForm, CustomUserCreationForm
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
 
 
@@ -19,7 +20,7 @@ class LandingPageView(TemplateView):
     template_name = "landing.html"
 
 
-class LeadListView(ListView):
+class LeadListView(LoginRequiredMixin, ListView):
     template_name="leads/lead_list.html"
     queryset=Lead.objects.all()
     context_object_name="leads"
